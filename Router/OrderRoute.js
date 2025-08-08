@@ -1,0 +1,10 @@
+const express = require("express")
+const router = express.Router()
+const {authenticateToken} = require("../Middleware/Ordermiddleware")
+const {getorders,updateOrders,pendingOrders,getMonthlyRevenue,getOrdersbyUsers} = require("../controller/Order")
+router.get("/getorders",authenticateToken,getorders)
+router.post("/updateOrders",authenticateToken,updateOrders)
+router.get("/numberPOrders",pendingOrders)
+router.get("/getmonthlyrevenue",getMonthlyRevenue)
+router.post("/getUserOrders",getOrdersbyUsers)
+module.exports = router
