@@ -20,7 +20,7 @@ const stripePayment = async(req,res) =>{
             payment_method_types:["card"],
             line_items:lineItems,
             mode:"payment",
-            success_url:"http://localhost:5173/successfulPayment",
+            success_url:"https://core-x-frontend-8mf3.vercel.app/successfulPayment",
             cancel_url:"http://localhost:5173/cancel",
             metadata:{
                 items:JSON.stringify(items),
