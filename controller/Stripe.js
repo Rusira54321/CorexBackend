@@ -21,7 +21,7 @@ const stripePayment = async(req,res) =>{
             line_items:lineItems,
             mode:"payment",
             success_url:"https://core-x-frontend-8mf3.vercel.app/successfulPayment",
-            cancel_url:"http://localhost:5173/cancel",
+            cancel_url:"https://core-x-frontend-8mf3.vercel.app/cancel",
             metadata:{
                 items:JSON.stringify(items),
                 email:email
